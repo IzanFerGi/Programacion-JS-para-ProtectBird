@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ProtectBird</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/ProtectBird.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROYECTO</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <header>
@@ -11,23 +13,47 @@
             <a href="../html/paginaweb.html"><img src="../img/logo.png" 
                 id="logo" onclick="document.getElementById('inicio').scrollIntoView();"></a>
             <ul class="nav-links">
-                <li><a href="#"><strong>JUEGA YA</strong></a></li>
+                <li><a href="../game/game.html"><strong>JUEGA YA</strong></a></li>
                 <li><a href="../html/birdcenter.html"><strong>BIRDCENTER</strong></a></li>
                 <li class="desplegable">
                     <a><strong>MAS</strong></a>
                     <ul>
                         <li><a href="../html/registrate.html"><strong>REGISTRATE</strong></a></li>
-                        <li><a href="../html/iniciarsesion.html"><strong>INICIAR SESION</strong></a></li>
-                    </ul>
+                        <li><a href="../hmtl/iniciarsesion.html"><strong>INICIAR SESION</strong></a></li>
+                    </ul>     
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <br></br>
-        <h1>ESTAMOS DESARROLLANDO EL JUEGO...</h1>
-        <br></br>
+    <main class="contenedor">
+        <section id="inicio">
+            <h1>Bienvenidos a <font color="#572364">ProtectBird</font>, no se lo pierdan</h1>
+            <h1>ProtectBird es una empresa de recreativas innovadora que desarrolla 
+                su propio videojuego dando un gran salto a la industria. La empresa 
+                se enfoca en crear un entorno de entretenimiento accesible y divertido 
+                para todos los usuarios a través de nuestra página web. Nuestra misión 
+                es garantizar que cada jugador, 
+                sin importar su experiencia, disfrute de un momento lúdico sin igual.</h1>
+            <h1 class="ow">--------- ÚNETE A NUESTRA GRAN COMUNIDAD!!! ---------</h1>
+        </section>
+
+        <section id="imagenes-rotativas">
+            <img src="../img/sleep.gif" alt="Imagen 1" class="imagen-rotativa">
+            <img src="../img/active.gif" alt="Imagen 2" class="imagen-rotativa">
+            <script src="../js/script.js"></script>
+        </section>
+
+        <section id="video-promocional">
+            <h1 class="ow">Video Promocional</h1>
+            <div class="video-container">
+                <video controls poster="ruta/a/imagen-previa.jpg">
+                    <source src="ruta/a/tu-video.mp4" type="video/mp4">
+                    <source src="ruta/a/tu-video.webm" type="video/webm">
+                </video>
+            </div>
+        </section>
+        
     </main>
 
     <footer class="globalfooter">
@@ -63,6 +89,7 @@
             Copyright © 2024 Protect Bird - All rights reserved
         </div>
     </footer>
-    <script src="../js/script.js"></script>
 </body>
 </html>
+
+  
