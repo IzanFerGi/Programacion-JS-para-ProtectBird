@@ -15,3 +15,9 @@ const ctx = canvas.getContext("2d");
 
 const pajaritoimg = new Image();
 pajaritoimg.src = "../img/ProtectBirdJuegoAvatar.png"
+
+
+//por lo que he visto tengo que poner la configuracion del avatar, asi que tendremos q poner la fuerza de salto y esas cosas
+
+let pajaritoAltura = canvas.height / 2; //Lo he dividido entre 2 para que empiece en la mitad
+let pajaritoVel = 0; //Pa darle la velocidad, empiezo por cero porque haré una funcion donde vaya pillando velocidad
