@@ -21,4 +21,5 @@ pajaritoimg.src = "../img/ProtectBirdJuegoAvatar.png"
 
 let pajaritoAltura = canvas.height / 2; //Lo he dividido entre 2 para que empiece en la mitad
 let pajaritoVel = 0; //Pa darle la velocidad, empiezo por cero porque haré una funcion donde vaya pillando velocidad
-const jump = 7; //Para darle lo que tiene que saltar. 
+const jump = -7; //Para darle lo que tiene que saltar. 
+const gravedad = 0.5; //para hacer la gravedad
