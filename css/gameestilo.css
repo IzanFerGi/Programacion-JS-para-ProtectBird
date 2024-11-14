@@ -1,12 +1,12 @@
 /* Estilos del cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../img/fondo.jpeg');
+    background-image: url('../img/BackgroundProtectBird.gif');
+    background-size:contain;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
     margin: 0;
 }
 

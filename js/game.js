@@ -4,3 +4,8 @@
 //Despues tendremos que poner valores aleatorios a los tubos para que el tamaño sea aleatorio
 //Luego de ello podnriamos algunas cosas para hacerlo un poqutin de mas dificil.
 //Y ahora tocará pensar en como hacer todo.
+
+//Empezaremos a hacer un par de constantes
+
+const canvas = document.getElementById("gameCanvas");
+const ctx = canvas.getContext("2d");
