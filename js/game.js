@@ -9,3 +9,9 @@
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
+
+//Tengo que cargar la imagen del avatar por lo cual tengo que extraerlo con una constante
+
+
+const pajaritoimg = new Image();
+pajaritoimg.src = "../img/ProtectBirdJuegoAvatar.png"
