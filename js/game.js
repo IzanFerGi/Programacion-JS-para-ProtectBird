@@ -37,6 +37,16 @@ function saltoPajarito(){
     //sea igual que el salto, practicamente será para que el salto se inicie.
 }
 
+document.addEventListener("keydown", (event) =>{
+    
+    if (event.code == " "){
+        saltoPajarito();
+    };
+
+});
+
+
+
 
 
 function iniciarGame(){
