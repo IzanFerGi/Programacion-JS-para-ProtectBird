@@ -23,3 +23,10 @@ let pajaritoAltura = canvas.height / 2; //Lo he dividido entre 2 para que empiec
 let pajaritoVel = 0; //Pa darle la velocidad, empiezo por cero porque haré una funcion donde vaya pillando velocidad
 const jump = -7; //Para darle lo que tiene que saltar. 
 const gravedad = 0.5; //para hacer la gravedad
+
+
+//ahora vamos a intentar que salga en pantalla el pajaro, para ver si pilla bien la imagen o si tendré que hacer algunos retoques.
+
+function dibujarPajarito(){
+    
+}
