@@ -20,7 +20,7 @@ pajaritoimg.src = "../img/ProtectBirdJuegoAvatar.png"
 //por lo que he visto tengo que poner la configuracion del avatar, asi que tendremos q poner la fuerza de salto y esas cosas
 
 let pajaritoAltura = canvas.height / 2; //Lo he dividido entre 2 para que empiece en la mitad
-let pajaritoVel = 0; //Pa darle la velocidad, empiezo por cero porque haré una funcion donde vaya pillando velocidad
+let pajaritoVel = 1; //Pa darle la velocidad, empiezo por cero porque haré una funcion donde vaya pillando velocidad
 const jump = -7; //Para darle lo que tiene que saltar. 
 const gravedad = 0.5; //para hacer la gravedad
 
@@ -45,6 +45,10 @@ document.addEventListener("keydown", (event) =>{
 
 });
 
+
+function actualizarPajarito(){
+    
+}
 
 
 
