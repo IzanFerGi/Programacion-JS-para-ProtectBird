@@ -29,7 +29,7 @@ const gravedad = 0.5; //para hacer la gravedad
 
 function dibujarPajarito(){
     dibujo.clearRect(0,0, canvas.height, canvas.width);//Aquí limpiamos todo lo que hay en pantalla por si acaso
-    dibujo.drawImage(pajaritoimg, 35, pajaritoAltura, 20, 20); //Aqui hacemos que se dibuje el pajaro..
+    dibujo.drawImage(pajaritoimg, 75, pajaritoAltura, 50, 50); //Aqui hacemos que se dibuje el pajaro..
 }
 
 
