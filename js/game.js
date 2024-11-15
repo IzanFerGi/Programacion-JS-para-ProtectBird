@@ -49,6 +49,11 @@ document.addEventListener("keydown", (event) =>{
 function actualizarPajarito(){
     pajaritoVel += gravedad; //Aqui hacemos que la velocidad del pajaro vaya aumentando por la gravedad
     pajaritoAltura+= pajaritoVel; // Aquí hacemos que la altura cambie gracias a la velocidad del pajaro
+
+    if (pajaritoAltura < canvas.height){
+        pajaritoAltura = canvas.height - 1;
+    }
+
 }
 
 
@@ -60,5 +65,10 @@ function iniciarGame(){
     requestAnimationFrame(iniciarGame); // Esto es para dibujar la animacion en la pantalla, asi que lo que hará será crear la animacion completa del pajaro.
 }
 
+document.addEventListener("keydown", (event) =>{
+    
+    if (event.code == "Enter"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
+        iniciarGame(); //Esto es para iniciar el juego
+    };
 
-iniciarGame();
+});
