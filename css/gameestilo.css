@@ -2,17 +2,18 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url('../img/BackgroundProtectBird.gif');
-    background-size:contain;
+    background-size:cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    background-color: aqua;
 }
 
 /* Estilos del encabezado principal */
 h1 {
-    color: #ffffff;
+    color: grey;
     text-align: center;
     font-size: 250%;
 }
