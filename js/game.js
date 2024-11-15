@@ -32,6 +32,11 @@ function dibujarPajarito(){
     dibujo.drawImage(pajaritoimg, 30, pajaritoAltura, 70, 60); //Aqui hacemos que se dibuje el pajaro.
 }
 
+function saltoPajarito(){
+    pajaritoVel = jump; //Hacemos esto para ahora crear una funcion donde lo que haremos es si tocamos cierta tecla lo que hará sera hacer que la velocidad del pajaro 
+    //sea igual que el salto, practicamente será para que el salto se inicie.
+}
+
 
 
 function iniciarGame(){
