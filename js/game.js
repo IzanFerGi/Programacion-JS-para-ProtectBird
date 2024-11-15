@@ -54,8 +54,8 @@ function actualizarPajarito(){
         pajaritoAltura = canvas.height - 50;//Aqui lo igualo para que no baje de la altura del canvas -50
     }
 
-    if (pajaritoAltura > canvas.height + 500){
-        pajaritoAltura = canvas.height + 500;
+    if (pajaritoAltura < 0){
+        pajaritoAltura = 0;
     }
 }
 
@@ -72,6 +72,14 @@ document.addEventListener("keydown", (event) =>{
     
     if (event.code == "Enter"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
         iniciarGame(); //Esto es para iniciar el juego
+    };
+
+});
+
+document.addEventListener("keydown", (event) =>{
+    
+    if (event.code == "Space"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
+        event.preventDefault();
     };
 
 });
