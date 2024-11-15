@@ -79,8 +79,8 @@ document.addEventListener("keydown", (event) =>{
 
 document.addEventListener("keydown", (event) =>{
     
-    if (event.code == "Space"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
-        event.preventDefault();//
+    if (event.code == "Space"){
+        event.preventDefault();//Esto es para que cuando le demos al espacio no se mueva la pagina web a la hora de jugar.
     };
 
 });
