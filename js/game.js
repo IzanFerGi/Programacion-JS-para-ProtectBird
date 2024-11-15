@@ -57,6 +57,7 @@ function actualizarPajarito(){
 function iniciarGame(){
     dibujarPajarito();//Esto es para iniciar la funcion de dibujar pajaro.
     actualizarPajarito();
+    requestAnimationFrame(iniciarGame); // Esto es para dibujar la animacion en la pantalla, asi que lo que hará será crear la animacion completa del pajaro.
 }
 
 
