@@ -47,7 +47,8 @@ document.addEventListener("keydown", (event) =>{
 
 
 function actualizarPajarito(){
-    
+    pajaritoVel += gravedad; //Aqui hacemos que la velocidad del pajaro vaya aumentando por la gravedad
+    pajaritoAltura+= pajaritoVel; // Aquí hacemos que la altura cambie gracias a la velocidad del pajaro
 }
 
 
@@ -55,6 +56,7 @@ function actualizarPajarito(){
 
 function iniciarGame(){
     dibujarPajarito();//Esto es para iniciar la funcion de dibujar pajaro.
+    actualizarPajarito();
 }
 
 
