@@ -50,6 +50,7 @@ function actualizarPajarito(){
     pajaritoVel += gravedad; //Aqui hacemos que la velocidad del pajaro vaya aumentando por la gravedad
     pajaritoAltura+= pajaritoVel; // Aquí hacemos que la altura cambie gracias a la velocidad del pajaro
 
+
     if (pajaritoAltura > canvas.height - 50){ // Aqui lo que hago es comparar la altura del pajaro con la del canvas
         pajaritoAltura = canvas.height - 50;//Aqui lo igualo para que no baje de la altura del canvas -50
     }
@@ -79,7 +80,7 @@ document.addEventListener("keydown", (event) =>{
 document.addEventListener("keydown", (event) =>{
     
     if (event.code == "Space"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
-        event.preventDefault();
+        event.preventDefault();//
     };
 
 });
