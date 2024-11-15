@@ -8,7 +8,7 @@
 //Empezaremos a hacer un par de constantes
 
 const canvas = document.getElementById("gameCanvas");
-const ctx = canvas.getContext("2d");
+const dibujo = canvas.getContext("2d");
 
 //Tengo que cargar la imagen del avatar por lo cual tengo que extraerlo con una constante
 
@@ -28,5 +28,15 @@ const gravedad = 0.5; //para hacer la gravedad
 //ahora vamos a intentar que salga en pantalla el pajaro, para ver si pilla bien la imagen o si tendré que hacer algunos retoques.
 
 function dibujarPajarito(){
-    
+    dibujo.clearRect(0,0, canvas.height, canvas.width);//Aquí limpiamos todo lo que hay en pantalla por si acaso
+    dibujo.drawImage(pajaritoimg, 35, pajaritoAltura, 20, 20); //Aqui hacemos que se dibuje el pajaro..
 }
+
+
+
+function iniciarGame(){
+    dibujarPajarito();//Esto es para iniciar la funcion de dibujar pajaro.
+}
+
+
+iniciarGame();
