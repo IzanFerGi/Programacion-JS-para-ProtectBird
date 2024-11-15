@@ -39,7 +39,7 @@ function saltoPajarito(){
 
 document.addEventListener("keydown", (event) =>{
     
-    if (event.code == " "){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
+    if (event.code == "Space"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
         saltoPajarito();
     };
 
