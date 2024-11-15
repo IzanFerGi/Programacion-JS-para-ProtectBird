@@ -50,8 +50,8 @@ function actualizarPajarito(){
     pajaritoVel += gravedad; //Aqui hacemos que la velocidad del pajaro vaya aumentando por la gravedad
     pajaritoAltura+= pajaritoVel; // Aquí hacemos que la altura cambie gracias a la velocidad del pajaro
 
-    if (pajaritoAltura > canvas.height - 50){
-        pajaritoAltura = canvas.height - 50;
+    if (pajaritoAltura > canvas.height - 50){ // Aqui lo que hago es comparar la altura del pajaro con la del canvas
+        pajaritoAltura = canvas.height - 50;//Aqui lo igualo para que no baje de la altura del canvas -50
     }
 
     if (pajaritoAltura > canvas.height + 500){
