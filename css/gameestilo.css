@@ -1,7 +1,7 @@
 /* Estilos del cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../img/BackgroundProtectBird.gif');
+    background-image: url('../img/fondobird.gif');
     background-size:cover;
     display: flex;
     flex-direction: column;
