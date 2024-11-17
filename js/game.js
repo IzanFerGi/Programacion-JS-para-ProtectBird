@@ -33,8 +33,10 @@ function dibujarPajarito(){
 
 
     //Ahora vamos a dibujar el puntuaje en la esquina de arriba a la derecha, intentaremos hacerla a través de segundos.
-
-    dibujo.fillText("Score", canvas.width - 20, 40);
+    dibujo.fillStyle = "White";
+    dibujo.font = "bold 30px Arial";
+    dibujo.textAlign = "right";
+    dibujo.fillText("Score: ", canvas.width - 15, 20);
     }
 
 function saltoPajarito(){
