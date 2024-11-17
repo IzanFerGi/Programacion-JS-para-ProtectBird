@@ -83,3 +83,7 @@ document.addEventListener("keydown", (event) =>{
     };
 
 });
+
+function darScore(){
+    
+}
