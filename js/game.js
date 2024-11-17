@@ -25,6 +25,12 @@ const jump = -7; //Para darle lo que tiene que saltar.
 const gravedad = 0.5; //para hacer la gravedad
 
 
+//Vamos a crear las variables para el score.
+
+let puntuacion = 0;
+let inicioTime = 0;  // Esto va a ser para la puntiacion, ya que creo que lo mas facil es ir pillandolo por segundos. ya que no tengo hecho aun los tubos, y eso va a ser lo mas complicado, asi que voy a hacerlo de esta manera.
+
+
 //ahora vamos a intentar que salga en pantalla el pajaro, para ver si pilla bien la imagen o si tendré que hacer algunos retoques.
 function dibujarPajarito(){
     dibujo.clearRect(0, 0, canvas.width, canvas.height);//Aquí limpiamos todo lo que hay en pantalla por si acaso
@@ -34,9 +40,9 @@ function dibujarPajarito(){
 
     //Ahora vamos a dibujar el puntuaje en la esquina de arriba a la derecha, intentaremos hacerla a través de segundos.
     dibujo.fillStyle = "White";
-    dibujo.font = "bold 30px Arial";
+    dibujo.font = "bold 40px Arial";
     dibujo.textAlign = "right";
-    dibujo.fillText("Score: ", canvas.width - 15, 20);
+    dibujo.fillText("Score: ", canvas.width - 15, 30);
     }
 
 function saltoPajarito(){
