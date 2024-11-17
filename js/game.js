@@ -74,6 +74,14 @@ function actualizarPajarito(){
 }
 
 
+function darScore(){
+    if(inicioTime == 0){
+        inicioTime = Date.now(); //Aquí lo que hacemos es sacar los numeros en milisegundos, eso va perfecto para sacar los segundos.
+    }
+
+    
+}
+
 
 
 function iniciarGame(){
@@ -97,7 +105,3 @@ document.addEventListener("keydown", (event) =>{
     };
 
 });
-
-function darScore(){
-
-}
