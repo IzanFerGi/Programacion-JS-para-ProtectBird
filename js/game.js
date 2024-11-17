@@ -29,6 +29,12 @@ const gravedad = 0.5; //para hacer la gravedad
 function dibujarPajarito(){
     dibujo.clearRect(0, 0, canvas.width, canvas.height);//Aquí limpiamos todo lo que hay en pantalla por si acaso
     dibujo.drawImage(pajaritoimg, 30, pajaritoAltura, 70, 60);  //Aqui hacemos que se dibuje el pajaro.
+
+
+
+    //Ahora vamos a dibujar el puntuaje en la esquina de arriba a la derecha, intentaremos hacerla a través de segundos.
+
+    dibujo.fillText("Score", canvas.width - 20, 40);
     }
 
 function saltoPajarito(){
@@ -85,5 +91,5 @@ document.addEventListener("keydown", (event) =>{
 });
 
 function darScore(){
-    
+
 }
