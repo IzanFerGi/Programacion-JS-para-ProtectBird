@@ -34,7 +34,7 @@ let inicioTime = 0;  // Esto va a ser para la puntiacion, ya que creo que lo mas
 //ahora vamos a intentar que salga en pantalla el pajaro, para ver si pilla bien la imagen o si tendré que hacer algunos retoques.
 function dibujarPajarito(){
     dibujo.clearRect(0, 0, canvas.width, canvas.height);//Aquí limpiamos todo lo que hay en pantalla por si acaso
-    dibujo.drawImage(pajaritoimg, 30, pajaritoAltura, 70, 60);  //Aqui hacemos que se dibuje el pajaro.
+    dibujo.drawImage(pajaritoimg, 30, pajaritoAltura, 90, 80);  //Aqui hacemos que se dibuje el pajaro.
 
 
 
@@ -42,7 +42,7 @@ function dibujarPajarito(){
     dibujo.fillStyle = "White";
     dibujo.font = "bold 40px Arial";
     dibujo.textAlign = "right";
-    dibujo.fillText("Score: ", canvas.width - 15, 30);
+    dibujo.fillText(`Score: ${puntuacion}`, canvas.width - 15, 30);
     }
 
 function saltoPajarito(){
@@ -64,8 +64,8 @@ function actualizarPajarito(){
     pajaritoAltura+= pajaritoVel; // Aquí hacemos que la altura cambie gracias a la velocidad del pajaro
 
 
-    if (pajaritoAltura > canvas.height - 50){ // Aqui lo que hago es comparar la altura del pajaro con la del canvas
-        pajaritoAltura = canvas.height - 50;//Aqui lo igualo para que no baje de la altura del canvas -50
+    if (pajaritoAltura > canvas.height - 70){ // Aqui lo que hago es comparar la altura del pajaro con la del canvas
+        pajaritoAltura = canvas.height - 75;//Aqui lo igualo para que no baje de la altura del canvas -75
     }
 
     if (pajaritoAltura < 0){
@@ -79,7 +79,8 @@ function darScore(){
         inicioTime = Date.now(); //Aquí lo que hacemos es sacar los numeros en milisegundos, eso va perfecto para sacar los segundos.
     }
 
-    
+    const tiempocontrario= Date.now(); // Hacemos una resta porque date.now saca los milisegundos desde 1970, por lo cual lo mejor es que se resten los dos entre  si y solo se irá actualizando en base a los segundos que pasa, y lo divido entre 1000 para sacarlo cada segundo.
+    puntuacion = Math.floor((tiempocontrario - inicioTime) / 1000);
 }
 
 
@@ -88,6 +89,7 @@ function iniciarGame(){
     dibujarPajarito();//Esto es para iniciar la funcion de dibujar pajaro.
     actualizarPajarito();
     requestAnimationFrame(iniciarGame); // Esto es para dibujar la animacion en la pantalla, asi que lo que hará será crear la animacion completa del pajaro.
+    darScore();
 }
 
 document.addEventListener("keydown", (event) =>{
