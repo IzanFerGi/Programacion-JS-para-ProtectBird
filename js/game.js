@@ -17,6 +17,14 @@ const pajaritoimg = new Image();
 pajaritoimg.src = "../img/ProtectBirdJuegoAvatar.png"
 
 
+//Creamos las constantes y variables necesarias para los tubos
+
+const tuboAncho = 30;
+const huecoentreTubos = 300;
+const velocidadTubos = 10;
+
+
+
 //por lo que he visto tengo que poner la configuracion del avatar, asi que tendremos q poner la fuerza de salto y esas cosas
 
 let pajaritoAltura = canvas.height / 2; //Lo he dividido entre 2 para que empiece en la mitad
