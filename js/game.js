@@ -71,6 +71,19 @@ document.addEventListener("keydown", (event) =>{
 });
 
 
+function generarTubos(){
+//Para poder hacer todo lo primero que debemos de hacer es mover los tubos hacia la izquierda
+
+//Luego lo que tendremos que hacer es Eliminar todos los tubos que salen de la pantalla
+
+//Despues seria crear nuevos tubos
+
+//Y por ultimo que se dibujen los tubos(Creo que es lo haré en otra funcion)
+
+
+}
+
+
 function actualizarPajarito(){
     pajaritoVel += gravedad; //Aqui hacemos que la velocidad del pajaro vaya aumentando por la gravedad
     pajaritoAltura+= pajaritoVel; // Aquí hacemos que la altura cambie gracias a la velocidad del pajaro
