@@ -6,6 +6,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: bottom;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
