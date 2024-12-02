@@ -114,7 +114,7 @@ nav {
 /*    ES EL ESTILO DEL FOOTER COMPARTIDO PARA TODOS LOS HTML     */
 
 /* Estilos generales del footer */
-footer.globalfooter {
+footer {
     background-color: rgb(53, 48, 48);
     padding: 3% 0;
     font-family: Arial, sans-serif;

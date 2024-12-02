@@ -1,19 +1,21 @@
 /* Estilos del cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../img/fondobird.gif');
-    background-size:cover;
+    background-image: url('../img/fondobird.jpg');
     display: flex;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    height: 100vh;
     margin: 0;
-    background-color: aqua;
 }
 
 /* Estilos del encabezado principal */
 h1 {
-    color: grey;
+    color: #ffffff;
     text-align: center;
     font-size: 250%;
 }
