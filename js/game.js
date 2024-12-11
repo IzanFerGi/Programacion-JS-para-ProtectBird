@@ -72,9 +72,9 @@ document.addEventListener("keydown", (event) =>{
 
 
 function generarTubos(){
-    if (!tubos.length || tubos[tubos.length - 1].x < canvas.width - 300) {  //En este apartado hacemos que si no hay ningun tubo en el array tubos o no hay ningun tubo a 300 px del borde que haga la condicion
+    if (!tubos.length || tubos[tubos.length - 1].x < canvas.width - 550) {  //En este apartado hacemos que si no hay ningun tubo en el array tubos o no hay ningun tubo a 300 px del borde que haga la condicion
         const alturaAleatoria = Math.random() * (canvas.height - espacioTubo - 100) + 50; //Aqui hacemos la constante para darle la altura aleatoria a los tubos.
-        tubos.push({ x: canvas.width, y: alturaAleatoria }); //Aqui lo que hacemos es añadir un nuevo tubo dentro del array.
+        tubos.push({ x: canvas.width -300, y: alturaAleatoria }); //Aqui lo que hacemos es añadir un nuevo tubo dentro del array.
     }
 
     tubos.forEach((tubo, index) => { //Aqui recorremos cada tubo
