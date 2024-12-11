@@ -22,7 +22,7 @@ pajaritoimg.src = "../img/ProtectBirdJuegoAvatar.png"
 let pajaritoAltura = canvas.height / 2; //Lo he dividido entre 2 para que empiece en la mitad
 let pajaritoVel = 1; //Pa darle la velocidad, empiezo por cero porque haré una funcion donde vaya pillando velocidad
 const jump = -7; //Para darle lo que tiene que saltar. 
-const gravedad = 0.5; //para hacer la gravedad
+const gravedad = 0.4; //para hacer la gravedad
 
 
 //Vamos a crear las variables para el score.
@@ -38,9 +38,9 @@ tuboAbajo.src = "../img/TuboProtectBird.png"
 const tuboArriba = new Image();
 tuboArriba.src = "../img/TuboFlappyBirdReverso.png"
 
-const anchoTubo = 55;
-const espacioTubo = 200;
-const velocidadTubo = 4;
+const anchoTubo = 70;
+const espacioTubo = 250;
+const velocidadTubo = 3;
 const tubos = [];
 
 //ahora vamos a intentar que salga en pantalla el pajaro, para ver si pilla bien la imagen o si tendré que hacer algunos retoques.
