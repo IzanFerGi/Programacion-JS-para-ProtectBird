@@ -72,16 +72,24 @@ document.addEventListener("keydown", (event) =>{
 
 
 function generarTubos(){
-//Para poder hacer todo lo primero que debemos de hacer es mover los tubos hacia la izquierda
+    if (!tubos.length || tubos[tubos.length - 1].x < canvas.width - 300) {  //En este apartado hacemos que si no hay ningun tubo en el array tubos o no hay ningun tubo a 300 px del borde que haga la condicion
+        const alturaAleatoria = Math.random() * (canvas.height - espacioTubo - 100) + 50; //Aqui hacemos la constante para darle la altura aleatoria a los tubos.
+        tubos.push({ x: canvas.width, y: alturaAleatoria }); //Aqui lo que hacemos es añadir un nuevo tubo dentro del array.
+    }
 
-//Luego lo que tendremos que hacer es Eliminar todos los tubos que salen de la pantalla
-
-//Despues seria crear nuevos tubos
-
-//Y por ultimo que se dibujen los tubos(Creo que es lo haré en otra funcion)
-
+    tubos.forEach((tubo, index) => { //Aqui recorremos cada tubo
+        tubo.x -= velocidadTubo; //hacemos que se muevan los tubos hacia la izquierda mirando la velocidad.
+        if (tubo.x + anchoTubo < 0) tubos.splice(index, 1); // Miramos si el tubo ha salido de la pantalla, y si es asi se borra.
+});
 
 }
+function dibujarTubos() {
+    for (let i = 0; i < tubos.length; i++) { //recorremos todo el array de tubos.
+        dibujo.drawImage(tuboArriba, tubos[i].x, 0, anchoTubo, tubos[i].y); //Aqui dibujamos el tubo de arriba.
+        dibujo.drawImage(tuboAbajo, tubos[i].x, tubos[i].y + espacioTubo, anchoTubo, canvas.height - (tubos[i].y + espacioTubo));//Aqui dibujamos el tubo de abajo.
+    }
+}
+
 
 
 function actualizarPajarito(){
@@ -113,6 +121,8 @@ function darScore(){
 function iniciarGame(){
     dibujarPajarito();//Esto es para iniciar la funcion de dibujar pajaro.
     actualizarPajarito();
+    generarTubos();
+    dibujarTubos();
     requestAnimationFrame(iniciarGame); // Esto es para dibujar la animacion en la pantalla, asi que lo que hará será crear la animacion completa del pajaro.
     darScore();
 }
