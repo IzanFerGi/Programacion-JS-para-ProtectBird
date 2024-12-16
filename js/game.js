@@ -142,3 +142,30 @@ document.addEventListener("keydown", (event) =>{
     };
 
 });
+
+
+function reiniciarJuego() {
+    // Reiniciamos las variables del juego
+    pajaritoAltura = canvas.height / 2;
+    pajaritoVel = 1;
+    puntuacion = 0;
+    inicioTime = 0;
+    tubos.length = 0; // Vaciamos el array de tubos
+    velocidadTubo = 3; // reiniciamos la velocidad de los tubos
+
+    // Limpiamos el canvas por completo
+    dibujo.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Dibujamos el estado inical del juego
+    dibujarPajarito();
+    darScore();
+
+    iniciarGame();
+}
+
+
+document.addEventListener("keydown", (event) => {
+    if (event.code === "KeyR") {
+        reiniciarJuego();
+    }
+});
