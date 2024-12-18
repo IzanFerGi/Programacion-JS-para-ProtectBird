@@ -116,11 +116,32 @@ function darScore(){
     puntuacion = Math.floor((tiempocontrario - inicioTime) / 1000);
 }
 
+//Vamos a hacer las colisiones de los tubos.
 
+function tuboColisiones() {
+    for (let i = 0; i < tubos.length; i++) {
+        const tubo = tubos[i];
+
+        // Para detectar la colision horizontal
+        const colisionHorizontal = 30 + 90 > tubo.x && 30 < tubo.x + anchoTubo;
+
+        // Para detectar la colision del tubo de arriba
+        const colisionSuperior = pajaritoAltura < tubo.y;
+
+        // Para detectar la colision del tubo de abajo
+        const colisionInferior = pajaritoAltura + 80 > tubo.y + espacioTubo;
+
+        
+        if (colisionHorizontal && (colisionSuperior || colisionInferior)) {//Este if lo que hace es decir, si colision horizontal y colision superior o colision inferior haz:
+
+        }
+    }
+}
 
 function iniciarGame(){
     dibujarPajarito();//Esto es para iniciar la funcion de dibujar pajaro.
     actualizarPajarito();
+    tuboColisiones();
     generarTubos();
     dibujarTubos();
     requestAnimationFrame(iniciarGame); // Esto es para dibujar la animacion en la pantalla, asi que lo que hará será crear la animacion completa del pajaro.
