@@ -16,7 +16,6 @@ const dibujo = canvas.getContext("2d");
 const pajaritoimg = new Image();
 pajaritoimg.src = "../img/ProtectBirdJuegoAvatar.png"
 
-
 //por lo que he visto tengo que poner la configuracion del avatar, asi que tendremos q poner la fuerza de salto y esas cosas
 
 let pajaritoAltura = canvas.height / 2; //Lo he dividido entre 2 para que empiece en la mitad
@@ -120,6 +119,7 @@ function darScore(){
 
 function tuboColisiones() {
     for (let i = 0; i < tubos.length; i++) {
+        let varno = true;
         const tubo = tubos[i];
 
         // Para detectar la colision horizontal
@@ -133,9 +133,12 @@ function tuboColisiones() {
 
         
         if (colisionHorizontal && (colisionSuperior || colisionInferior)) {//Este if lo que hace es decir, si colision horizontal y colision superior o colision inferior haz:
-
-        }
+            let varno = false;
+            alert('Tu puntuaje en este intento es:' + puntuacion);
+            alert('Dale al botón enter si quieres volver a jugar ;D');
+            window.location.reload();
     }
+}
 }
 
 function iniciarGame(){
@@ -162,31 +165,4 @@ document.addEventListener("keydown", (event) =>{
         event.preventDefault();//Esto es para que cuando le demos al espacio no se mueva la pagina web a la hora de jugar.
     };
 
-});
-
-
-function reiniciarJuego() {
-    // Reiniciamos las variables del juego
-    pajaritoAltura = canvas.height / 2;
-    pajaritoVel = 1;
-    puntuacion = 0;
-    inicioTime = 0;
-    tubos.length = 0; // Vaciamos el array de tubos
-    velocidadTubo = 3; // reiniciamos la velocidad de los tubos
-
-    // Limpiamos el canvas por completo
-    dibujo.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Dibujamos el estado inical del juego
-    dibujarPajarito();
-    darScore();
-
-    iniciarGame();
-}
-
-
-document.addEventListener("keydown", (event) => {
-    if (event.code === "KeyR") {
-        reiniciarJuego();
-    }
 });
