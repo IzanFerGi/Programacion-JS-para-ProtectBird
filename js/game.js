@@ -61,13 +61,7 @@ function saltoPajarito(){
     //sea igual que el salto, practicamente será para que el salto se inicie.
 }
 
-document.addEventListener("keydown", (event) =>{
-    
-    if (event.code == "Space"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
-        saltoPajarito();
-    };
 
-});
 
 
 function generarTubos(){
@@ -131,12 +125,19 @@ function tuboColisiones() {
         const colisionInferior = pajaritoAltura + 80 > tubo.y + espacioTubo;
 
         
-        if (colisionHorizontal && (colisionSuperior || colisionInferior)) {//Este if lo que hace es decir, si colision horizontal y colision superior o colision inferior haz:
+        if (colisionHorizontal && (colisionSuperior || colisionInferior)) {
+            
 
-            alert('Tu puntuaje en este intento es:' + puntuacion);
-            alert('Dale al botón enter si quieres volver a jugar ;D');
-            window.location.reload();
-    }
+            Swal.fire({
+                title: '¡Game Over!',
+                text: 'Tu puntuaje en este intento es: ' + puntuacion + '. Dale al botón de "Jugar" si quieres volver a intentarlo ;D',
+                icon: 'error',
+                confirmButtonText: '¡OK!'
+            }).then(() => {
+                window.location.reload(); // Recarga la página después de cerrar la alerta
+            });
+            reiniciarJuego();
+        }
 }
 }
 
@@ -150,6 +151,45 @@ function iniciarGame(){
     requestAnimationFrame(iniciarGame); // Esto es para dibujar la animacion en la pantalla, asi que lo que hará será crear la animacion completa del pajaro.
     darScore();
 }
+
+
+
+
+function reiniciarJuego() {
+    // Reiniciamos las variables del juego
+    dibujo.clearRect(0, 0, canvas.width, canvas.height);
+    pajaritoAltura = canvas.height / 2;
+    pajaritoVel = 1;
+    puntuacion = 0;
+    inicioTime = 0;
+    tubos.length = 0; // Vaciamos el array de tubos
+    velocidadTubo = 3; // reiniciamos la velocidad de los tubos
+
+    // Limpiamos el canvas por completo
+    
+
+    // Dibujamos el estado inical del juego
+
+    iniciarGame();
+}
+
+
+
+document.addEventListener("keydown", (event) =>{
+    
+    if (event.code == "Space"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
+        saltoPajarito();
+    };
+
+});
+
+document.addEventListener("click", (event) =>{
+    
+    if (event.code == "click"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
+        saltoPajarito();
+    };
+
+});
 
 document.addEventListener("keydown", (event) =>{
     
