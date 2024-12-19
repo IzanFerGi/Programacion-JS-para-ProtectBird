@@ -119,7 +119,6 @@ function darScore(){
 
 function tuboColisiones() {
     for (let i = 0; i < tubos.length; i++) {
-        let varno = true;
         const tubo = tubos[i];
 
         // Para detectar la colision horizontal
@@ -133,7 +132,7 @@ function tuboColisiones() {
 
         
         if (colisionHorizontal && (colisionSuperior || colisionInferior)) {//Este if lo que hace es decir, si colision horizontal y colision superior o colision inferior haz:
-            let varno = false;
+
             alert('Tu puntuaje en este intento es:' + puntuacion);
             alert('Dale al botón enter si quieres volver a jugar ;D');
             window.location.reload();
