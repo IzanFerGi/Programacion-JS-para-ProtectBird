@@ -141,6 +141,7 @@ function tuboColisiones() {
 }
 
 function iniciarGame(){
+    document.querySelector('.botoninicio').style.display = 'none';
     dibujarPajarito();//Esto es para iniciar la funcion de dibujar pajaro.
     actualizarPajarito();
     tuboColisiones();
@@ -149,14 +150,6 @@ function iniciarGame(){
     requestAnimationFrame(iniciarGame); // Esto es para dibujar la animacion en la pantalla, asi que lo que hará será crear la animacion completa del pajaro.
     darScore();
 }
-
-document.addEventListener("keydown", (event) =>{
-    
-    if (event.code == "Enter"){//Aqui lo que hacemos es que si se crea el evento del espacio active la funcion del salto.
-        iniciarGame(); //Esto es para iniciar el juego
-    };
-
-});
 
 document.addEventListener("keydown", (event) =>{
     
