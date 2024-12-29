@@ -165,11 +165,6 @@ function reiniciarJuego() {
     tubos.length = 0; // Vaciamos el array de tubos
     velocidadTubo = 3; // reiniciamos la velocidad de los tubos
 
-    // Limpiamos el canvas por completo
-    
-
-    // Dibujamos el estado inical del juego
-
     iniciarGame();
 }
 
