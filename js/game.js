@@ -1,10 +1,3 @@
-//Queremos hacer un juego parecido al flappybird, vamos a ver como crearlo.
-//Lo primero que tendremos que hacer será poner el fondo y las imagenes.
-//Despues de ello la velocidad del juego.
-//Despues tendremos que poner valores aleatorios a los tubos para que el tamaño sea aleatorio
-//Luego de ello podnriamos algunas cosas para hacerlo un poqutin de mas dificil.
-//Y ahora tocará pensar en como hacer todo.
-
 //Empezaremos a hacer un par de constantes
 
 const canvas = document.getElementById("gameCanvas");
@@ -41,6 +34,12 @@ const anchoTubo = 70;
 const espacioTubo = 250;
 const velocidadTubo = 3;
 const tubos = [];
+
+//Vamos a poner musica, por lo cual haré una constante de la musica y la pondremos en bucle.
+
+const musicaFondo = new Audio("../musica/musicaAngry.mp3");
+musicaFondo.loop = true; // Para repetir la musica en bucle.
+
 
 //ahora vamos a intentar que salga en pantalla el pajaro, para ver si pilla bien la imagen o si tendré que hacer algunos retoques.
 function dibujarPajarito(){
