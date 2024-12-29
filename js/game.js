@@ -142,6 +142,7 @@ function tuboColisiones() {
 
 function iniciarGame(){
     document.querySelector('.botoninicio').style.display = 'none';
+    musicaFondo.play();
     dibujarPajarito();//Esto es para iniciar la funcion de dibujar pajaro.
     actualizarPajarito();
     tuboColisiones();
